@@ -1,0 +1,68 @@
+<% include ../partials/header %>
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/showCard.css">
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Accounts</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Accounts Details</h6>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Name on Card</h5>
+                <p><%= foundCard.name %></p>
+            </div>
+            <div class="col-lg-6">
+                <h5>Card Number</h5>
+                <p><%= foundCard.cardNumber %></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5>Expiry Date</h5>
+                <p><%= foundCard.expiryDate.getMonth() + " / " + foundCard.expiryDate.getFullYear() %></p>
+            </div>
+            <div class="col-lg-6">
+                <h5>CVV</h5>
+                <p><%= foundCard.cvv %></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h5>Money in Account</h5>
+                <p>Rs. <%= foundCard.money %> /-</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <a href="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/withdraw"
+                    class="btn btn-dark">withdraw</a>
+            </div>
+            <div class="col-lg-3">
+                <a href="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/deposit"
+                    class="btn btn-success">deposit</a>
+            </div>
+            <div class="col-lg-3">
+                <a href="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/transact"
+                    class="btn btn-info">Transact</a>
+            </div>
+            <div class="col-lg-3">
+                <div class="btn-hehe">
+                        <a href="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/edit" class="btn btn-warning">Edit</a>
+                        <form style="display: inline" action="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

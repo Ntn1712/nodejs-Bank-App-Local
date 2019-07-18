@@ -1,0 +1,95 @@
+img{
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#landing-con {
+    padding-top: 20px;
+}
+
+.carousel-caption>hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 70%;
+}
+
+.carousel-caption .btn {
+    text-shadow: none;
+}
+
+.carousel-caption>a {
+    text-decoration: none;
+    color: black;
+    height: 40px;
+    font-size: 18px;
+    background: #e0e0e0;
+}
+
+.carousel-inner{
+    height: 400px;
+}
+
+/* .carousel-control-prev, .carousel-control-next{
+    margin-top: 60px;
+} */
+
+#p {
+    color: darkgray;
+}
+
+#icon {
+    font-size: 40px;
+}
+
+#landing-header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 3em;
+    color: #96afe0;
+}
+
+.carousel-caption {
+    top: 60px;
+    bottom: auto;
+}
+
+h4 {
+    color: darkgray;
+    padding: 15px;
+}
+
+.col-lg-4>img {
+    width: 100%;
+    height: 200px;
+}
+
+.col-lg-6>img {
+    width: 100%;
+    height: 300px;
+}
+
+.text-center {
+    margin: 5px;
+}
+
+.huhu {
+    background: #f0f1f2;
+    margin: 20px 0;
+}
+
+.huhuhu {
+    padding: 20px;
+}
+
+#bank {
+    font-size: 1.5em;
+}
+
+/* h5 {
+    color: black;
+    align-content: center;
+} */

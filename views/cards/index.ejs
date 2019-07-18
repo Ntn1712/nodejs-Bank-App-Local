@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/indexCard.css">
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Accounts</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Accounts Details</h6>
+    <div class="container">
+        <p class="enter">Choose Your Card</p>
+        <hr>
+        <% foundUser.cards.forEach(function(card){ %>
+        <ul>
+            <p class="idk">Name on Card</p>
+            <li class="adhar-input"><strong><%= card.name %></strong></li>
+            <p class="idk">Card Number</p>
+            <li class="adhar-input"><Strong><%= card.cardNumber %></Strong></li>
+        </ul>
+        <a href="/member/<%= foundUser._id %>/cards/<%= card._id %>" class="btn btn-primary btn-block">Select</a>
+        <hr>
+        <% }) %>
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

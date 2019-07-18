@@ -1,0 +1,33 @@
+<% include partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+<script type="text/javascript" src="/scripts/showPass.js"></script>
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Login</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Login</h6>
+    <div class="container">
+        <p class="enter">Enter Your Credentials</p>
+        <hr>
+        <form action="/login" method="POST">
+            <p class="idk">Username</p>
+            <input class="adhar-input" type="text" name="username" placeholder="username">
+            <p class="idk">Password</p>
+            <input class="adhar-input" id="myInput" type="password" name="password" placeholder="password">
+            <input type="checkbox" onclick="myFunction()">Show Password 
+
+            <button class="btn btn-sm btn-block">Login</button>
+            <p class="text-right"><a href="/forgot">Forgot Password?</a></p>
+        </form>
+    </div>
+
+</div>
+
+
+<% include partials/footer %>
+

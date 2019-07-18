@@ -1,0 +1,27 @@
+<% include ../partials/header %> 
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Withdraw</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Withdraw</h6>
+    <div class="container">
+        <p class="enter">Enter Amount</p>
+        <hr>
+        <form action="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/withdraw" method="POST">
+            <p class="idk">Amount</p>
+            <input class="adhar-input" type="number" name="money" placeholder="money" min="0">
+            <button class="btn btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

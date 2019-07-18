@@ -1,0 +1,24 @@
+.dashboard-header {
+    width: 100%;
+    background:  #004466;
+    color: #ffffff;
+}
+
+.dashboard-header .container {
+    width: 70%;
+    padding: 5px auto;
+}
+
+.user {
+    padding: 15px 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+#copyright {
+    background: #004466;
+    color: #ffffff;
+    padding: 10px 50px ;
+}

@@ -1,0 +1,35 @@
+<% include ../partials/header %> 
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">New Account</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Add New Account</h6>
+    <div class="container">
+        <p class="enter">Enter Details</p>
+        <hr>
+        <form action="/member/<%= foundUser._id %>/cards" method="POST">
+            <p class="idk">Name on Card</p>
+            <input class="adhar-input" type="text" name="card[name]" placeholder="name on card">
+            <p class="idk">Card Number</p>
+            <input class="adhar-input" type="number" name="card[cardNumber]" placeholder="card number">
+            <p class="idk">Expiry Date</p>
+            <input class="adhar-input" type="date" name="card[expiryDate]" placeholder="expiry date">
+            <p class="idk">CVV</p>
+            <input class="adhar-input" type="number" name="card[cvv]" placeholder="cvv" min="100" max="999">
+            <button class="btn btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<% include ../partials/footer %>

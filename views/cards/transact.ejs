@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+
+
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Transact</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Transact</h6>
+    <div class="container">
+        <p class="enter">Enter Details</p>
+        <hr>
+        <form action="/member/<%= foundUser._id %>/cards/<%= foundCard._id %>/transact" method="POST">
+            <p class="idk">Amount</p>
+            <input class="adhar-input" type="number" name="money" placeholder="money to tarnsfer" min="0">
+            <p class="idk">Card Number</p>
+            <input class="adhar-input" type="text" name="cardNumber" placeholder="card Number">
+            <button class="btn btn-block">Transact</button>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

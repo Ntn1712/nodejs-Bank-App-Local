@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/dashboard.css">
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Estimated Balance</h5>
+    </div>
+</div>
+
+<div class="container img-thumbnail">
+    <% if(currentUser){ %>
+    <p class="text-center"><strong>Welcome <%= foundUser.firstName %> <%= foundUser.lastName %>.
+    <% var sum = 0; %>
+     You current total Balance is: <% foundUser.cards.forEach(function(cards){ %>
+        <%    sum = cards.money + sum; %>
+        <% }) %>
+        <span style="font-size: 20px;"><%= sum %> /-.</span>
+        Your future Balance will be:
+        <% var total %>
+        <% total = ((sum * 2)/100) + sum %>
+        <span style="font-size: 20px;"><%= total %> /-.</span></strong>
+    </p>
+    <p>Current Total balance is calculated by combining all the money in all accounts. And future balance is based on the 2% interest rate per year after a year.</p>
+    <% } else { %>
+    <p>no user</p>
+    <% } %>
+</div>
+
+
+
+<% include ../partials/footer %>
+
+<!--    <a href="#">Loan Application</a>
+        <a href="#">Bill Payments</a>
+        <a href="#">Nearby ATM</a>
+        <a href="#">Insurance</a> -->

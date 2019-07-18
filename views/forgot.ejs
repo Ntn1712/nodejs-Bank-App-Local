@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Forgot Password</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">Reset Password</h6>
+    <div class="container">
+        <p class="enter">Enter Registered Email</p>
+        <hr>
+        <form action="/forgot" method="POST">
+            <p class="idk">Email</p>
+            <input class="adhar-input" type="email" name="email" autofocus class="form-control">
+            <button class="btn btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+<% include ./partials/footer %>

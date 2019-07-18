@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/updateAdhar.css">
+
+
+<div class="dashboard-header">
+    <div class="container">
+        <h5 class="user">Update Your Aadhar Card</h5>
+    </div>
+</div>
+<div class="container img-thumbnail">
+    <h6 class="text-center">UPDATE YOUR AADHAR CARD</h6>
+    <div class="container">
+        <p class="enter">Enter Your Aadhar Card</p>
+        <hr>
+        <p id="idk">Aadhar Card Number</p>
+        <form action="/member/<%= foundUser._id %>/adhar?_method=PUT" method="POST">
+            <input id="adhar-input" type="text" name="adhar" value="<%= foundUser.adhar %>">
+            <button class="btn btn-sm btn-block">Update My Aadhar</button>
+        </form>
+    </div>
+
+</div>
+
+<% include ../partials/footer %>
