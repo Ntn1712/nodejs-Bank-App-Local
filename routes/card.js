@@ -3,6 +3,7 @@ var router = express.Router();
 var User = require("../models/user");
 var Card = require("../models/card");
 var middleware = require("../middleware/index");
+var async = require("async");
 
 router.get("/member/:id/cards/new", middleware.isLoggedIn, function(req, res){
     User.findById(req.params.id, function(err, foundUser){

@@ -3,6 +3,10 @@ var router = express.Router();
 var User = require("../models/user");
 var middleware = require("../middleware/index");
 
+router.get("/about", (req, res)=>{
+    res.render("about");
+})
+
 router.get("/", function(req, res){
     res.render("landing");
 });
