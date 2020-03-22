@@ -22,7 +22,7 @@ var cardRoutes = require("./routes/card");
 var indexRoutes = require("./routes/index");
 
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.DATABASEURL || "mongodb://localhost/bank_app", 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bank_app", 
     {useNewUrlParser: true, useFindAndModify: true},
     err => {
         if(!err) console.log("Connection successfull");
